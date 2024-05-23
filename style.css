@@ -9,33 +9,36 @@ body{
 }
 
 .container {
-    height: 100%;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
 }
 
+.container > * {
+    padding: 2vh;
+}
+/* Sidebar styling */
 .sidebar {
     background-color: red;
     grid-column: 1;
     grid-row: 1 / -1;
     display: flex;
     flex-flow: column;
-    
+    position: sticky;
 }
 
 .sidebar-logo {
     display: flex;
     align-items: center;
     gap: 2vh;
-    padding: 1vh;
     margin-bottom: 3vh;
     font-size: 2rem;
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 8vh;
+    height: 8vh;
     background-color: blanchedalmond;
 }
 
@@ -63,19 +66,53 @@ body{
     height: 5vh;
     background-color: darkslateblue;
 }
-
+/* Header styling */
 .header {
     background-color: aqua;
     grid-area: 0 / 1 / auto / -1 ;
+    display: grid;
+    grid-template-rows: 1fr;
 }
 
+.header-top {
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto auto;
+    gap: 1vh;
+    align-items: center;
+}
+
+.searchbar{
+    border: 1px solid green;
+    height: 5vh;
+    width: auto;
+}
+
+.user-header {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.greeting {
+    display: flex;
+    flex-flow: row;
+}
+
+.user-options {
+    display: flex;
+    flex-flow: row;
+}
+
+/* Content styling */
 .content {
-    padding: 2vh;
+    padding: 5vh;
     background-color: bisque;
     display: grid;
-    gap: 3vh;
+    gap: 5vh;
     grid-template-columns: 5fr 1fr;
     grid-template-rows: 1fr 1fr;
+    overflow: visible;
 }
 
 
@@ -90,15 +127,15 @@ body{
     margin-top: 2vh;
     display: grid;
     gap: 3vh;
-    grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
     grid-template-rows: auto;
     justify-items: center;
 }
 
 .task-card {
     background-color: blueviolet;
-    width: 50vh;
-    height: 25vh;
+    width: 40vh;
+    height: 20vh;
 }
 
 .task .name {
