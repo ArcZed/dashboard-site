@@ -1,0 +1,114 @@
+html,
+body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar {
+    background-color: red;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-flow: column;
+    
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+    padding: 1vh;
+    margin-bottom: 3vh;
+    font-size: 2rem;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: blanchedalmond;
+}
+
+.menu {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3vh;
+}
+
+.menu-options {
+    display: flex;
+    flex-flow: row;
+    gap: 2vh;
+    align-items: center;
+    padding: 1vh;
+}
+
+.menu-options:hover {
+    background-color: rgb(255, 169, 169);
+    cursor: pointer;
+}
+
+.icon {
+    width: 5vh;
+    height: 5vh;
+    background-color: darkslateblue;
+}
+
+.header {
+    background-color: aqua;
+    grid-area: 0 / 1 / auto / -1 ;
+}
+
+.content {
+    padding: 2vh;
+    background-color: bisque;
+    display: grid;
+    gap: 3vh;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+
+.tasks {
+    padding: 2vh;
+    background-color: chocolate;
+    grid-row: 1 / -1;
+}
+
+.task-content {
+    margin-top: 2vh;
+    display: grid;
+    gap: 3vh;
+    grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.task-card {
+    background-color: blueviolet;
+    width: 50vh;
+    height: 25vh;
+}
+
+.task .name {
+    position: absolute;
+}
+
+.notification {
+    background-color: cornflowerblue;
+}
+
+.trending {
+    background-color: wheat;
+}
