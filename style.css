@@ -11,7 +11,7 @@ body{
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 9fr;
     grid-template-rows: 1fr 6fr;
 }
 
@@ -20,7 +20,7 @@ body{
 }
 /* Sidebar styling */
 .sidebar {
-    background-color: red;
+    background-color: #4392F1;
     grid-column: 1;
     grid-row: 1 / -1;
     display: flex;
@@ -37,8 +37,8 @@ body{
 }
 
 .logo {
-    width: 8vh;
-    height: 8vh;
+    width: 7vh;
+    height: 7vh;
     background-color: blanchedalmond;
 }
 
@@ -68,10 +68,13 @@ body{
 }
 /* Header styling */
 .header {
-    background-color: aqua;
+    background-color: white;
     grid-area: 0 / 1 / auto / -1 ;
     display: grid;
     grid-template-rows: 1fr;
+    gap: 2vh;
+    box-shadow: 0px 5px 5px rgb(207, 207, 207);
+    z-index: 1;
 }
 
 .header-top {
@@ -92,35 +95,40 @@ body{
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-content: center;
 }
 
 .greeting {
     display: flex;
     flex-flow: row;
+    align-items: center;
+    gap: 5px;
 }
 
 .user-options {
     display: flex;
     flex-flow: row;
+    gap: 2vh;
 }
 
 /* Content styling */
 .content {
-    padding: 5vh;
-    background-color: bisque;
+    padding: 0;
     display: grid;
     gap: 5vh;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 1fr;
     overflow: visible;
+    
 }
 
 
 
 .tasks {
     padding: 2vh;
-    background-color: chocolate;
+    background-color: #F7F7F2;
     grid-row: 1 / -1;
+    
 }
 
 .task-content {
@@ -133,19 +141,19 @@ body{
 }
 
 .task-card {
-    background-color: blueviolet;
-    width: 40vh;
-    height: 20vh;
-}
-
-.task .name {
-    position: absolute;
+    background-color: white;
+    width: 45vh;
+    height: 25vh;
+    border-left: 1vh solid #FBAF00;
+    border-radius: 10px;
 }
 
 .notification {
     background-color: cornflowerblue;
+
 }
 
 .trending {
     background-color: wheat;
 }
+
